@@ -4,23 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>抽鬼牌</title>
-    <script src="libs/p5.js"></script> <!-- 載入 p5.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <style>
+        /* 讓整個畫面置中 */
+        body {
+            display: flex;
+            flex-direction: column; /* 讓內容垂直排列 */
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 讓頁面填滿整個視窗高度 */
+            margin: 0;
+            background-color: #ffffff; /* 設定背景顏色 */
+        }
+
+        /* 確保 p5.js 畫布置中 */
+        #game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 讓圖片與文字置中 */
+        .steam-game {
+            text-align: center;
+            margin-top: 20px; /* 讓遊戲區域與 Steam 圖片有點間距 */
+        }
+
+        /* 美化圖片 */
+        .steam-game img {
+            width: 300px; /* 圖片大小 */
+            border-radius: 10px; /* 圓角 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
+        }
+
+        /* 讓文字更明顯 */
+        .steam-game a {
+            display: block;
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #0078D4;
+        }
+
+        /* 滑鼠移過去改變顏色 */
+        .steam-game a:hover {
+            color: #0056a3;
+        }
+    </style>
 </head>
 <body>
-    <script src="sketch.js"></script> <!-- 載入你的遊戲程式碼 -->
-	
-	    <!-- 團隊其他 Steam 遊戲 -->
-    <div style="text-align: center; margin-top: 50px;">
-        <a href="https://store.steampowered.com/app/2325390?utm_source=github" target="_blank">
-            <img src="steam_game.jpg" alt="AirBoost: Airship Knight" style="width: 300px; border-radius: 10px;">
-        </a>
-        <p>
-            <a href="https://store.steampowered.com/app/2325390?utm_source=github" target="_blank"
-               style="text-decoration: none; font-size: 18px; font-weight: bold; color: #0078D4;">
-                other steam game!
-            </a>
-        </p>
+    <!-- 遊戲畫面 -->
+    <div id="game-container">
+        <script src="sketch.js"></script> <!-- 你的遊戲程式碼 -->
     </div>
 
+    <!-- 團隊其他 Steam 遊戲 -->
+    <div class="steam-game">
+        <a href="https://store.steampowered.com/app/2325390?utm_source=github" target="_blank">
+            <img src="image.png" alt="AirBoost: Airship Knight">
+        </a>
+        <a href="https://store.steampowered.com/app/2325390?utm_source=github" target="_blank">
+            other Steam game!
+        </a>
+    </div>
 </body>
 </html>
