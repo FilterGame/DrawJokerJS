@@ -4,3 +4,8 @@
 
 目標就是做抽鬼牌
 使用 p5.js框架
+
+可以直接點網址玩 : https://filtergame.github.io/DrawJokerJS/
+
+順便廣告同團隊的非AI遊戲(X
+https://store.steampowered.com/app/2325390/AirBoost/
